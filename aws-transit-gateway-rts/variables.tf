@@ -50,3 +50,8 @@ variable "firewall_routes" {
     error_message = "firewall_routes must be defined when enable_firewall_routes is true."
   }
 }
+
+variable "region" {
+  description = "AWS region for this deployment"
+  type        = string
+}
