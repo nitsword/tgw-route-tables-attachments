@@ -1,0 +1,4 @@
+account,vpc_id,subnet_ids
+primary,vpc-0537c13bc0c86fff4,subnet-003c47fb852247426
+spoke_one,vpc-023792f91d16d1484,"subnet-05d73791fd1cf9343,subnet-000a17d8320f9e3bf,subnet-0abcd4fb07403e960"
+spoke_one,vpc-057396b34b6209f7c,"subnet-08de682d6a8726bf3,subnet-092d6847bc7d3e0d3"

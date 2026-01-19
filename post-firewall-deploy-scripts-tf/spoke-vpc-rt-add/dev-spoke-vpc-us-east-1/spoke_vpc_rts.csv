@@ -1,0 +1,4 @@
+account,vpc_id,route_table_id,destination_cidr
+primary,vpc-0537c13bc0c86fff4,rtb-07f9827560e866e58,0.0.0.0/0
+spoke_one,vpc-023792f91d16d1484,rtb-0e0663e076d670054,0.0.0.0/0
+spoke_one,vpc-057396b34b6209f7c,rtb-01a1dde4e73ffa1a5,0.0.0.0/0

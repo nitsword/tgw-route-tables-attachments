@@ -1,0 +1,33 @@
+environment = "dev"
+application = "ntw"
+region = "us-east-1"
+
+tgw_id = "tgw-09396a29da000e3c8"
+
+firewall_tgw_attachment_id = "tgw-attach-089d75803205b9d92"
+
+enable_firewall_routes = false
+# firewall_routes        = {}
+
+# firewall_routes = {
+#   spoke1_ipv4 = {
+#     destination_cidr_block        = "10.1.0.0/16"
+#     transit_gateway_attachment_id = "tgw-attach-0b6084ba670f4b793"
+#   }
+# }
+
+#   spoke1_ipv6 = {
+#     destination_cidr_block        = "2600:abcd:100::/56"
+#     transit_gateway_attachment_id = "tgw-attach-01111"
+#   }
+# }
+
+# spoke_tgw_attachment_ids = {
+#   spoke1 ="tgw-attach-0b6084ba670f4b793"
+# }
+
+common_tags = {
+  Environment = "dev"
+  Application = "ntw"
+  CreatedBy       = "Cloud-network-team"
+} 
