@@ -2,9 +2,9 @@ environment = "dev"
 application = "ntw"
 region = "us-east-1"
 
-tgw_id = "tgw-09396a29da000e3c8"
+tgw_id = "tgw-0c61971f6a5e960d9"
 
-firewall_tgw_attachment_id = "tgw-attach-089d75803205b9d92"
+firewall_tgw_attachment_id = "tgw-attach-0e4d12f6f9c635fa4"
 
 enable_firewall_routes = false
 # firewall_routes        = {}
@@ -25,9 +25,3 @@ enable_firewall_routes = false
 # spoke_tgw_attachment_ids = {
 #   spoke1 ="tgw-attach-0b6084ba670f4b793"
 # }
-
-common_tags = {
-  Environment = "dev"
-  Application = "ntw"
-  CreatedBy       = "Cloud-network-team"
-} 

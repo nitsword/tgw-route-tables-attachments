@@ -1,8 +1,8 @@
-variable "spoke_tgw_attachment_ids" {
-  description = "Map of spoke VPC TGW attachment IDs"
-  type        = map(string)
-  default     = {}
-}
+# variable "spoke_tgw_attachment_ids" {
+#   description = "Map of spoke VPC TGW attachment IDs"
+#   type        = map(string)
+#   default     = {}
+# }
 
 variable "firewall_tgw_attachment_id" {
   description = "TGW attachment ID for Firewall VPC"
@@ -21,8 +21,14 @@ variable "tags" {
   default     = {}
 }
 
-variable "application" { type = string }
-variable "environment" { type = string }
+variable "application" { 
+  type        = string
+  description = "Tags to apply to resources"
+ }
+variable "environment" { 
+  type        = string
+  description = "Tags to apply to resources"
+ }
 #variable "env" { type = string }
 
 variable "base_tags" {

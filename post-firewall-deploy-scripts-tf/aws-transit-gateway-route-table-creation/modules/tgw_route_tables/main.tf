@@ -3,8 +3,8 @@ resource "aws_ec2_transit_gateway_route_table" "this" {
 
   transit_gateway_id = var.tgw_id
 
-  tags = merge(
-    var.common_tags,
+ tags = merge(
+    var.tags,        
     each.value.tags,
     {
       Name = each.key

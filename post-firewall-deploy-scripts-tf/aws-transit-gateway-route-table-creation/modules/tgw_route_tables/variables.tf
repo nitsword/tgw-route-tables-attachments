@@ -10,8 +10,19 @@ variable "route_tables" {
   }))
 }
 
-variable "common_tags" {
-  description = "Tags applied to all route tables"
-  type        = map(string)
-  default     = {}
+variable "tags" {
+  type = map(string)
+  default = {}
+}
+
+variable "region" {
+  type = string
+}
+
+variable "environment" {
+  type = string
+}
+
+variable "application" {
+  type = string
 }

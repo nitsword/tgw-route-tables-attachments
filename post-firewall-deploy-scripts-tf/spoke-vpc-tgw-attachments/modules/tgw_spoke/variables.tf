@@ -7,16 +7,15 @@ variable "tags" {
 }
 
 variable "region" {
-  type = map(string)
+  type = string
 }
 
 variable "environment" {
-  type = map(string)
+  type = string
 }
 
 variable "application" {
-  type = map(string)
-  default = {}
+  type = string
 }
 variable "base_tags" {
   type    = map(string)

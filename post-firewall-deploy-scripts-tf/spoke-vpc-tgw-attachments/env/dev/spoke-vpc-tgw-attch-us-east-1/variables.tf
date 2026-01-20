@@ -15,15 +15,13 @@ variable "tags" {
 }
 
 variable "application" { 
-  type = map(string)
-  default = ""
+  type = string
   }
 variable "environment" { 
-  type = map(string)
-  default = ""
+  type = string
   }
 variable "region" {
-  type = map(string)
+  type = string
 }
 
 variable "base_tags" {

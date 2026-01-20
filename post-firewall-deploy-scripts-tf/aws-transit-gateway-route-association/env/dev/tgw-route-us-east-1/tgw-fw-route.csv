@@ -1,0 +1,7 @@
+name,destination_cidr,attachment_id
+spoke1_ipv4,10.1.0.0/16,tgw-attach-00b1f18877d581193
+spoke1_ipv6,2600:abcd:100::/56,tgw-attach-00b1f18877d581193
+spoke2_ipv4,10.2.0.0/16,tgw-attach-07a2bf5cffc1cdc50
+spoke2_ipv6,2600:abcd:200::/56,tgw-attach-07a2bf5cffc1cdc50 
+spoke3_ipv4,10.3.0.0/16,tgw-attach-0d3091c19222fa4ec
+spoke3_ipv6,2600:abcd:300::/56,tgw-attach-0d3091c19222fa4ec
