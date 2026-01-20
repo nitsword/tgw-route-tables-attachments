@@ -43,6 +43,10 @@ data "aws_ec2_transit_gateway" "main" {
 module "attachments_primary" {
   source    = "../../../modules/tgw_spoke"
   providers = { aws = aws.primary }
+  application          = var.application
+  region               = var.region
+  environment = var.environment
+  base_tags            = var.base_tags
 
   for_each = {
     for i, a in lookup(local.attachments_by_account, "primary", []) :
@@ -52,6 +56,11 @@ module "attachments_primary" {
   tgw_id     = var.tgw_id
   vpc_id     = each.value.vpc_id
   subnet_ids = each.value.subnet_ids
+
+  tags = merge(
+    var.base_tags,
+    {}
+  )
 }
 
 resource "aws_route" "primary_default_to_tgw" {
@@ -79,6 +88,10 @@ resource "aws_route" "primary_default_to_tgw" {
 module "attachments_spoke_one" {
   source    = "../../../modules/tgw_spoke"
   providers = { aws = aws.spoke_one }
+  application          = var.application
+  region               = var.region
+  environment = var.environment
+  base_tags            = var.base_tags
 
   for_each = {
     for i, a in lookup(local.attachments_by_account, "spoke_one", []) :
@@ -88,6 +101,11 @@ module "attachments_spoke_one" {
   tgw_id     = var.tgw_id
   vpc_id     = each.value.vpc_id
   subnet_ids = each.value.subnet_ids
+
+    tags = merge(
+    var.base_tags,
+    {}
+  )
 }
 
 resource "aws_route" "spoke_one_default_to_tgw" {
@@ -115,6 +133,10 @@ resource "aws_route" "spoke_one_default_to_tgw" {
 # module "attachments_spoke_two" {
 #   source    = "../../../modules/tgw_spoke"
 #   providers = { aws = aws.spoke_two }
+#  application          = var.application
+#   region               = var.region
+#   environment = var.environment
+#   base_tags            = var.base_tags
 
 #   for_each = {
 #     for i, a in lookup(local.attachments_by_account, "spoke_two", []) :
@@ -124,6 +146,11 @@ resource "aws_route" "spoke_one_default_to_tgw" {
 #   tgw_id     = var.tgw_id
 #   vpc_id     = each.value.vpc_id
 #   subnet_ids = each.value.subnet_ids
+
+#  tags = merge(
+#     var.base_tags,
+#     {}
+#   )
 # }
 
 # resource "aws_route" "spoke_two_default_to_tgw" {

@@ -8,4 +8,25 @@ variable "tgw_id" {
   type        = string
 }
 
+variable "tags" {
+  type        = map(string)
+  description = "Tags to apply to resources"
+  default     = {}
+}
 
+variable "application" { 
+  type = map(string)
+  default = ""
+  }
+variable "environment" { 
+  type = map(string)
+  default = ""
+  }
+variable "region" {
+  type = map(string)
+}
+
+variable "base_tags" {
+  type    = map(string)
+  default = { "Created by" = "Cloud Network Team" }
+}

@@ -10,4 +10,6 @@ resource "aws_ec2_transit_gateway_vpc_attachment" "this" {
 
   transit_gateway_default_route_table_association = false
   transit_gateway_default_route_table_propagation = false
+
+  tags = var.tags
 }

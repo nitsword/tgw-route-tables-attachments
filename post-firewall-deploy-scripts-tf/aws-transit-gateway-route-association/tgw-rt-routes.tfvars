@@ -8,6 +8,7 @@ firewall_tgw_attachment_id = "tgw-attach-089d75803205b9d92"
 
 enable_firewall_routes = true
 
+# Need to put desination cidrs and spoke tgw attachement ids for routes addition
 firewall_routes = {
   spoke1_ipv4 = {
     destination_cidr_block        = "10.1.0.0/16"
